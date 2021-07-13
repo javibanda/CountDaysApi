@@ -15,7 +15,6 @@ import java.time.LocalDate;
 @Getter
 @Data
 @Table(name = "day")
-@NoArgsConstructor
 public class Day {
 
     @Id
@@ -23,7 +22,7 @@ public class Day {
     @JsonFormat(pattern="yyyy-MM-dd")
     private LocalDate date;
 
-    public Day(int count){
+    public Day(){
         this.date = LocalDate.now();
         this.id = new SetIdDay(date).getIdDay();
     }
