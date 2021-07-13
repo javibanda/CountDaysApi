@@ -22,16 +22,10 @@ public class Day {
     private Long id;
     @JsonFormat(pattern="yyyy-MM-dd")
     private LocalDate date;
-    private int count;
 
     public Day(int count){
-        this.count = count;
         this.date = LocalDate.now();
         this.id = new SetIdDay(date).getIdDay();
-    }
-
-    public void addCount(int add){
-        count = count + add;
     }
 
 }
