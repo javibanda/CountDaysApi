@@ -23,4 +23,8 @@ public class Count {
     @JoinColumn(name="day_id", referencedColumnName = "id")
     private Day day;
 
+    public Count (int count){
+        this.count = count;
+    }
+
 }
