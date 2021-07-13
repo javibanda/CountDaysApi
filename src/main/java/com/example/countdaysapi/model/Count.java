@@ -23,6 +23,10 @@ public class Count {
     @JoinColumn(name="day_id", referencedColumnName = "id")
     private Day day;
 
+    @ManyToOne(targetEntity = Church.class)
+    @JoinColumn(name = "church_id", referencedColumnName = "id")
+    private Church employee;
+
     public Count (int count){
         this.count = count;
     }
