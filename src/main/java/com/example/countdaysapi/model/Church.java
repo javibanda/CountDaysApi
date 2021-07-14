@@ -1,6 +1,7 @@
 package com.example.countdaysapi.model;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,7 +30,7 @@ public class Church {
 
     private String priestUser;
     private String pass;
-
+    @JsonFormat(pattern="yyyy-MM-dd")
     private LocalDate ordinationDay;
 
     public Church(
